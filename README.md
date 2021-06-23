@@ -54,7 +54,6 @@ Membuat file css pada directory public dengan nama style.css (coppy file praktik
 ![gambar14](https://user-images.githubusercontent.com/56240221/122937004-d319b100-d39b-11eb-9ca1-bd9f7c7bf8fe.jpg)
 
 Kemudian ubah file about.php (/app/view/about.php) seperti berikut:
-
 <?= $this->include('template/header'); ?>
 <h1><?= $title; ?></h1>
 <hr>
