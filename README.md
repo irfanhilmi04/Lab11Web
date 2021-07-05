@@ -268,3 +268,47 @@ Tambahkan method logout pada Controller User seperti berikut :
 Maka ketika menekan logout dan konfirmasi, akan kembali ke halaman login.
 
 ![gambar13 1](https://user-images.githubusercontent.com/56240221/123818401-2606e180-d923-11eb-8437-4226f6ea816c.jpg)
+
+# Praktikum 14 - Pemrograman Web (Pagination dan Pencarian)
+## Nama : Mochammad Irfan Hilmi
+## NIM : 311910497
+## Kelas : TI.19.A2
+## Laporan Praktikum
+
+## Langkah 1 - Membuat Pagination
+Pagination digunakan untuk membatasi tampilan data pada sebuah halaman menjadi beberapa halaman tergantung banyaknya data yang akan ditampilkan.
+Untuk membuat pagination Codeigniter 4, buka kembali Controller Artikel, kemudian modifikasi kode pada method admin_index seperti berikut.
+![gambar1](https://user-images.githubusercontent.com/56240221/124469039-0d377980-ddc4-11eb-8903-ffc8cd91da87.jpg)
+
+Kemudian buka file views/artikel/admin_index.php dan tambahkan kode berikut dibawah deklarasi tabel data.
+![gambar2](https://user-images.githubusercontent.com/56240221/124469045-0e68a680-ddc4-11eb-9262-7948e40ce15f.jpg)
+
+Buka menu daftar artikel untuk melihat hasilnya.
+![gambar3](https://user-images.githubusercontent.com/56240221/124468986-fabd4000-ddc3-11eb-881c-e4ee01994ad7.jpg)
+
+## Langkah 2 - Membuat Pencarian
+Pencarian data digunakan untuk memfilter data.
+Untuk membuat pencarian data, buka kembali Controller Artikel, pada method admin_index ubah kodenya menjadi seperti berikut.
+![gambar4](https://user-images.githubusercontent.com/56240221/124469012-06106b80-ddc4-11eb-89e5-17579323ff84.jpg)
+
+Kemudian buka kembali file views/artikel/admin_index.php dan tambahkan form pencarian sebelum deklarasi tabel seperti ini.
+![gambar5](https://user-images.githubusercontent.com/56240221/124469028-0ad51f80-ddc4-11eb-9ad3-45f300db1172.jpg)
+Dan ubah link pager menjadi <?= $pager->only(['q'])->links(); ?>.
+
+Selanjutnya buka kembali halaman admin artikel dan masukkan kata kunci tertentu pada form pencarian.
+![gambar6](https://user-images.githubusercontent.com/56240221/124469993-3ad0f280-ddc5-11eb-8382-d16c45a98a33.jpg)
+
+## Langkah 3 - Membuat Upload Gambar
+Menambahkan fungsi unggah gambar pada tambah artikel.
+Buka kembali Controller Artikel, sesuaikan kode pada method add seperti berikut.
+![gambar7](https://user-images.githubusercontent.com/56240221/124470004-3c9ab600-ddc5-11eb-95cc-a7f46f6a8048.jpg)
+
+Kemudian pada file views/artikel/form_add.php tambahkan field input file serta sesuaikan tag form dengan menambahkan ecrypt type seperti berikut.
+<form action="" method="post" enctype="multipart/form-data">
+![gambar8](https://user-images.githubusercontent.com/56240221/124470012-3dcbe300-ddc5-11eb-9b94-dd8c92913877.jpg)
+
+Kemudian lakukan percobaan membuat artikel dengan mengupload sebuah gambar.
+![gambar9](https://user-images.githubusercontent.com/56240221/124469914-25f45f00-ddc5-11eb-9c0a-b3dc854156a9.jpg)
+  
+Berikut tampilan artikel yang dibuat dengan upload gambar.
+![gambar10](https://user-images.githubusercontent.com/56240221/124469973-3573a800-ddc5-11eb-924b-a1629691c42b.jpg)
